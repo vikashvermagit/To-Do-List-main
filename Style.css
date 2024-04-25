@@ -1,0 +1,138 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+
+#wrapper{
+    width: 100%;
+   min-height: 100vh;
+   background-color: rgba(221, 129, 9, 0.539);
+   padding: 10px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+}
+.to-do-list{
+    
+    min-width: 540px;
+    background-color: white;
+    
+    padding: 5px;
+    border-radius: 10px;
+}
+.header{
+    display: flex;
+}
+img{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 135px;
+    bottom: 60px;
+}
+h2{
+    font-weight: bolder;
+    font-size: x-large;
+    color: rgb(228, 206, 176);
+    padding: 8px;
+}
+.search{
+    position: relative;
+    bottom: 40px;
+    left: 30px;
+    
+}
+input{
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    padding: auto;
+    font-size:medium;
+    font-weight: bolder;
+}
+button{
+    position: absolute;
+    border: none;
+    outline: none;
+    left: 337px;
+    height:47px ;
+    width: 100px;
+    border-radius: 40px;
+    background-color: orangered;
+    font-size: 16px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+.list {
+    position: relative;
+    bottom: 25px;
+    padding: 10px;
+    margin-left: 40px;
+    
+}
+
+li {
+    list-style: none;
+    user-select: none;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    display: inline-block; /* Ensure the pseudo-element has a layout */
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    background-image: url(checked.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li span{
+    position: absolute;
+    right: 20px;
+    color: red;
+    
+
+   
+}
+
+ul li span :hover{
+    background-color: #555;
+}
+footer{
+    position: relative;
+    top: 250px;
+    right: 380px;
+    font-weight: bolder;
+    color: rgba(133, 76, 3, 0.416);
+    font-size: x-large;
+}
